@@ -1,0 +1,159 @@
+body, div, img, a, p {
+	margin: 0; 
+	padding: 0;
+}
+html {
+	min-height: 100%;
+}
+a:active, a:focus, img {
+	outline: 0;
+}
+img {
+	border:none;
+}
+a, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+body {
+	cursor: default; 
+	min-width: 590px; 
+	font-family: 'PT Sans', serif;  
+	font: 400 20px/31px "PT Sans"; 
+	color: #FFFFFF; 
+	background: #000103 url(../images/bg.jpg) center 0px;
+	text-align: center; 
+	min-height: 637px;
+	-o-background-size: 100% auto; 
+	-webkit-background-size: cover; 
+	-khtml-background-size: cover; 
+	-moz-background-size: cover; 
+	background-size: cover; 
+}
+.wnd {
+	position: absolute; 
+	width: 435px; 
+	height: 450px; 
+	/*background: url(../images/wndBg.png) no-repeat; */
+	background: url(../images/goodgame-empire-2.png) no-repeat;
+	left: 73%;
+	top: 50%; 
+	margin: -280px 0 0 -220px; 
+	/*padding-top: 150px;*/
+}
+.step {
+	overflow: hidden;
+}
+.step.n2, .step.n3, .step.n4, .step.n5 {
+	display: none;
+}
+.step.n4 {
+	height: 0; 
+	margin-top: 100px;
+}
+.yellow {
+	font: 400 15px/24px 'PT Sans'; 
+	color: #f9c604; 
+	border: 1px solid #f9c604; 
+	background:rgba(241,144,32,0.09); 
+	width:	350px; 
+	margin: 0 auto 30px; 
+	padding: 10px 17px 10px;
+}
+.yellow span {
+	font-size: 26px; 
+	color:	#fff;
+}
+.white {
+	width: 375px; 
+	margin: 0 auto; 
+	font-size: 14px;
+	line-height: 1.5;
+}
+.step.n1 .white {
+	margin-bottom: 0px;
+}
+.step.n2 .white {
+	margin-bottom: 10px;
+}
+.step.n3 .white {
+	margin-bottom: 10px;
+}
+.step.n4 .white {
+	margin-bottom: 10px;
+}
+.step.n5 .white {
+	margin-bottom: 25px; 
+	line-height: 20px;
+}
+.step.n5 .yellow {
+	margin-bottom: 20px;
+}
+.q {
+	width: 370px; 
+	font-size: 15px; 
+	margin: 0 auto 20px; 
+	line-height: 1.7;
+}
+.step.n2 .q {
+	margin-bottom: 10px;
+}
+.btnBox {
+	font: 400 20px/46px 'PT Sans';
+}
+.btn {
+	display: inline-block; 
+	width: 147px; 
+	height: 72px;
+	text-transform: uppercase; 
+	font: 600 16px/72px 'PT Sans'; 
+	margin: 0 12px; 
+	color: #FFFFFF;
+}
+.btn.green {
+	background: url(../images/btn-green.png); 
+}
+.btn.red {
+	background: url(../images/btn-red.png);
+}
+.wait {
+	margin-bottom: 120px;
+}
+.progressBarBox {
+	width: 350px; 
+	height: 33px; 
+	margin: auto;
+}
+.progressBar {
+	width: 0; 
+	height: 33px; 
+	background: url(../images/progressBar.png) 0px; 
+	border-radius: 3px;
+}
+.breaker {
+	width: 349px; 
+	height: 1px; 
+	background: #caa60b; 
+	margin: 29px auto; 
+	clear: both;
+}
+.step .breaker {
+	margin: 30px auto;
+}
+.step.n2 .breaker {
+	margin: 20px auto
+}
+.black {
+	font: 400 15px/24px 'PT Sans'; 
+	color: #000; 
+	border: 1px solid #000; 
+	background:rgba(241,144,32,0.09); 
+	width:	350px; 
+	margin: 0 auto 30px; 
+	padding: 10px 17px 10px;
+	font-weight: bold;
+}
+.black span {
+	font-size: 26px;
+    font-weight: bold;	
+	color:	#fff;
+}

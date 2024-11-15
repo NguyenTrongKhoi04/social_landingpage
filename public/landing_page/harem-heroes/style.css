@@ -1,0 +1,176 @@
+@font-face {
+    font-family: CarterOne;
+    src: url(assets/CarterOne.ttf);
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  #link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  body {
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #front {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #front>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @media (max-width: 1023px) and (min-height: 620px) and (orientation: portrait) {
+    #front {
+      width: 100%;
+      height: 100%;
+    }
+    #front>div {
+      top: 43%;
+      background: url('assets/mob_front.png') no-repeat center center;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 85%;
+      height: 110%;
+    }
+    button {
+      position: absolute;
+      bottom: 6%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 70px;
+      font-size: 35px;
+    }
+  }
+  @media (max-width: 1023px) and (max-height: 620px) and (orientation: portrait) {
+    #front {
+      width: 100%;
+      height: 100%;
+    }
+    #front>div {
+      top: 40%;
+      background: url('assets/mob_front.png') no-repeat center center;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 67%;
+      height: 110%;
+    }
+    #front button {
+      position: absolute;
+      bottom: 6%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160px;
+      height: 55px;
+      font-size: 27px;
+    }
+  }
+  @media (max-width: 1023px) and (orientation: landscape) {
+    #front {
+      width: 100%;
+      height: 100%;
+    }
+    #front>div {
+      top: 45%;
+      background: url('assets/mobH_front.png') no-repeat center center;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 72%;
+      height: 80%;
+    }
+    #front button {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 160px;
+      height: 55px;
+      font-size: 27px;
+    }
+  }
+  @media (min-width: 1023px) {
+    #front {
+      width: 100%;
+      height: 100%;
+    }
+    #front>div {
+      top: 50%;
+      background: url('assets/desk_front.png') no-repeat center center;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      background-size: contain;
+      width: 72%;
+      height: 80%;
+    }
+    #front button {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 200px;
+      height: 70px;
+      font-size: 27px;
+    }
+  }
+  .btnBlue {
+    line-height: 0px;
+    font-family: CarterOne, 'Carter One', cursive;
+    text-decoration: none;
+    text-align: center;
+    background: #057;
+    background: -webkit-linear-gradient(-90deg,#00aaff 0,#006688 50%,#005577 51%,#00aaff 100%);
+    background: -moz-linear-gradient(180deg,#00aaff 0,#006688 50%,#005577 51%,#00aaff 100%);
+    background: linear-gradient(180deg,#00aaff 0,#006688 50%,#005577 51%,#00aaff 100%);
+    color: #fff;
+    border: 1px solid;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    border-color: #068;
+    -webkit-box-shadow: -1px 2px 1px 1px rgba(255,255,255,0.8) inset, 1px -2px 1px 3px #057 inset, 0 3px 3px 0 rgba(0,51,68,0.7);
+    box-shadow: -1px 2px 1px 1px rgba(255,255,255,0.8) inset, 1px -2px 1px 3px #057 inset, 0 3px 3px 0 rgba(0,51,68,0.7);
+    background-image: linear-gradient(180deg,rgba(0,170,255,0.53) 0,rgba(0,102,136,0.53) 50%,rgba(0,85,119,0.53) 51%,rgba(0,170,255,0.53) 100%) !important;
+    animation: blue_button_glow 600ms linear 0s infinite normal;
+  }
+  @keyframes blue_button_glow {
+    0% {
+      background-color: #0af;
+      border-color: #068;
+    }
+    50% {
+      background-color: #5ff;
+      border-color: #5df;
+    }
+    100% {
+      background-color: #0af;
+      border-color: #068;
+    }
+  }
+  

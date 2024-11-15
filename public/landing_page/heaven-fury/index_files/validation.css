@@ -1,0 +1,85 @@
+        #already-member {
+        position: absolute;
+        top: 35px;
+        height: 80px;
+        left: auto;
+        right: 30px;
+        width: 204px;
+        background: #505050;
+        background: rgba(0,0,0,.6);
+        border: 2px solid #eee;
+        color: #eee;
+        border-radius: 3px;
+        font-family: Arial,Helvetica,sans-serif;
+        box-shadow: inset 1px 1px 10px 1px rgba(0,0,0,.3),1px 1px 5px 1px rgba(0,0,0,.5);
+        z-index: 5;
+        -webkit-transition: width .3s;
+        -moz-transition: width .3s;
+        -o-transition: width .3s;
+        transition: width .3s;
+        font: 12px/1.3 Arial,Helvetica,sans-serif;
+    }
+    .already-link{
+        position: absolute;
+        text-decoration: none;
+        top: 3px;
+        bottom: 0;
+        left: 0;
+        width: 130px;
+        color: #eee;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 20px 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity .15s,visibility .15s;
+        -moz-transition: opacity .15s,visibility .15s;
+        -o-transition: opacity .15s,visibility .15s;
+        transition: opacity .15s,visibility .15s;
+        -webkit-transition-delay: .15s;
+        transition-delay: .15s;
+    }
+    #already-member .login-block{
+        width: 150px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        -webkit-transition: width .3s;
+        -moz-transition: width .3s;
+        -o-transition: width .3s;
+        transition: width .3s;
+    }
+    #already-member .logo-block{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        border-left: 1px solid #eee;
+    }
+    #already-member .logo-block img{
+        margin-top: 15px;
+        margin-left: 7px;
+    }
+/*    .log-sign .ValidationErrors{
+            font-size: 10px;
+            color: #000;
+            position: absolute;
+            left: 300px;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+            background: red url("images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+            color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 5px #aaa;
+        }*/
+
+
+/* Input autofill styles override */
+input:-webkit-autofill,input:-webkit-autofill:focus input:-webkit-autofill,input:-webkit-autofill:hover,select:-webkit-autofill,select:-webkit-autofill:focus,select:-webkit-autofill:hover,textarea:-webkit-autofill,textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus{-webkit-text-fill-color:#333;-webkit-box-shadow:0 0 0 1000px #fff inset;transition:background-color 5000s ease-in-out 0s}

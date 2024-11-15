@@ -1,0 +1,11 @@
+.bodywrapper{
+    background: url(bg1.jpg) no-repeat center center fixed;
+    background-size: cover!important;
+}
+
+@media only screen and (max-width: 620px) {
+    .bodywrapper{
+        background: url(mbg1.jpg);
+        background-size: cover!important;
+    }
+}

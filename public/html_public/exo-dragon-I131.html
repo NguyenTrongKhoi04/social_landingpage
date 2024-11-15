@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ATTENTION!</title>
+        <meta
+            name="viewport"
+            content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"
+        />
+        <link
+            href="../landing_page/exo/hh/web/l131/img/favicon.ico"
+            rel="icon"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../landing_page/exo/hh/web/l131/css/style.css?v=1"
+        />
+        <script type="text/javascript" src="{{string_replace_url}}"></script>
+
+        <script>
+            function step1() {
+                document
+                    .getElementById("q00")
+                    .setAttribute("style", "display:none");
+                document
+                    .getElementById("q0")
+                    .setAttribute("style", "display:block");
+                document
+                    .getElementById("bd")
+                    .setAttribute(
+                        "style",
+                        'background-image: url("../landing_page/exo/hh/web/l131/img/bg.jpg");'
+                    );
+            }
+        </script>
+    </head>
+
+    <body id="bd">
+        <div class="layer"></div>
+        <div id="container" align="left">
+            <div id="q00" class="toggleDiv active" align="center">
+                <div class="mobile-center">
+                    <div
+                        id="box"
+                        class="box-bg"
+                        align="center"
+                        style="margin-top: 250px"
+                    >
+                        <div id="first-title" align="center">
+                            <h1 class="font-style" id="text1">WARNING!</h1>
+                        </div>
+                        <p id="text2">
+                            DON'T LET YOUR GIRLFRIEND SEE WHAT YOU ARE PLAYING
+                            NOW. CAN YOU HANDLE IT?
+                        </p>
+                        <div class="show_hide bg">
+                            <div class="wrap">
+                                <div class="btn" onclick="step1()">
+                                    <div class="btn-cap" id="text3">YES</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="q0" class="toggleDiv" align="left">
+                <div class="put-center">
+                    <div id="box" class="box-bg">
+                        <!--<div id="top" align="center">
+                        <span class="h1">
+                            <b>
+                                <p class="font-style" id="text4">YOU MUST FOLLOW THE RULES SHOWN BELOW</p>
+                            </b>
+                        </span>
+                </div>-->
+                        <!--<p>
+                    ☝ <span id="text5">You should be over 18 years old to play this game.</span>
+                </p>-->
+                        <p>
+                            <!--☝-->
+                            <span id="text6"
+                                >Anything can happen in this open world game,
+                                including aggressive sex. It is your
+                                responsibility to protect yourself from sexually
+                                transmitted diseases.
+                            </span>
+                        </p>
+                        <!--<p>
+                    ☝ <span id="text7">Keep your doors closed when playing this game.</span>
+                </p>-->
+                        <a id="agree" href="{{string_replace_url}}">
+                            <div class="wrap">
+                                <div class="btn-yes">
+                                    <div class="btn-cap" id="text8">
+                                        I ACCEPT
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

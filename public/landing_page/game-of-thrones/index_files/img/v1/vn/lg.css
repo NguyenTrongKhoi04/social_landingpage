@@ -1,0 +1,29 @@
+html, body{
+    font-family: sans-serif;
+}
+
+.text-free-game{
+    background-image: url(text-free-game.png);
+}
+.text-title{
+    background-image: url(text-choose.png);
+}
+.text-unlock{
+    background-image: url(text-unlock.png);
+}
+
+@media (max-width: 780px) {
+
+    .text-free-game{
+        background-image: url(text-free-game-640.png);
+    }
+
+    .text-title{
+        background: url(text-choose.png )top center no-repeat;
+    }
+
+    .text-unlock{
+        background-image: url(text-unlock-640.png);
+    }
+
+}
