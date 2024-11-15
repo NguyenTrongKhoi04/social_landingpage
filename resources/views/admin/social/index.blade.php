@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách Tên File</title>
-    <!-- Kết nối với Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css" rel="stylesheet">
@@ -54,7 +53,6 @@
                                 placeholder="Nhập link để tạo các Landing page mới..." required>
                             <button type="submit" class="btn btn-success btn-lg">Thêm</button>
                         </div>
-                        <!-- Display Validation Errors -->
                         @if ($errors->has('linkOffer'))
                             <div class="alert alert-danger mt-2">
                                 {{ $errors->first('linkOffer') }}
@@ -64,9 +62,15 @@
                 </div>
             </form>
         </div>
+
+        <div class="text-center mt-3">
+            <button type="submit" id="deleteSelected" class="btn btn-danger">Xóa các mục đã chọn</button>
+        </div>
+
         <table id="fileTable" class="table table-striped table-bordered table-hover">
             <thead class="thead-dark">
                 <tr>
+                    <th><input type="checkbox" id="selectAll"></th>
                     <th>Tên Landing Page</th>
                     <th>Thao tác</th>
                 </tr>
@@ -74,13 +78,14 @@
             <tbody>
                 @foreach ($fileNames as $fileName)
                     <tr>
+                        <td><input type="checkbox" class="select-item text-center" value="{{ $fileName }}"></td>
                         <td><a href="{{ $fileName }}">{{ $fileName }}</a></td>
                         <td>
                             <form action="{{ route('social.destroy', ['social' => $fileName]) }}" method="POST"
                                 style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                                <button type="submit" onclick="return confirm('Chắc chắn muốn xóa ?')" class="btn btn-danger btn-sm">Xóa</button>
                             </form>
                         </td>
                     </tr>
@@ -88,6 +93,7 @@
             </tbody>
         </table>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
@@ -109,6 +115,37 @@
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf'
                 ]
+            });
+
+            // Chọn tất cả checkbox
+            $('#selectAll').on('click', function() {
+                $('.select-item').prop('checked', this.checked);
+            });
+
+            // Xóa các mục đã chọn
+            $('#deleteSelected').on('click', function() {
+                var selectedFiles = [];
+                $('.select-item:checked').each(function() {
+                    selectedFiles.push($(this).val());
+                });
+
+                if (selectedFiles.length > 0) {
+                    if (confirm("Bạn có chắc chắn muốn xóa các mục đã chọn không?")) {
+                        $.ajax({
+                            url: "{{ route('social.bulkDelete') }}",  // Route cho xóa hàng loạt
+                            type: 'POST',
+                            data: {
+                                _token: "{{ csrf_token() }}",
+                                files: selectedFiles
+                            },
+                            success: function(response) {
+                                location.reload();
+                            }
+                        });
+                    }
+                } else {
+                    alert("Vui lòng chọn ít nhất một mục để xóa.");
+                }
             });
         });
     </script>

@@ -139,4 +139,34 @@ class GeneratorHTMLController extends Controller
         return redirect()->route('social.index');
     }    
 
+    public function bulkDelete(Request $request)
+    {
+        $fileNames = $request->input('files');
+    
+        if (is_array($fileNames) && count($fileNames) > 0) {
+            $deletedCount = 0;
+    
+            foreach ($fileNames as $fileName) {
+                try {
+                    $filePath = public_path($fileName);
+                    if (file_exists($filePath)) {
+                        unlink($filePath);
+                        $deletedCount++;
+                    } else {
+                        session()->flash('error', "Landing Page {$fileName} không tồn tại.");
+                    }
+                } catch (\Exception $e) {
+                    session()->flash('error', 'Đã có lỗi xảy ra khi xóa một hoặc nhiều Landing Page.');
+                }
+            }
+    
+            if ($deletedCount > 0) {
+                session()->flash('success', "{$deletedCount} Landing Page đã được xóa thành công.");
+            }
+        } else {
+            session()->flash('error', 'Không có Landing Page nào được chọn để xóa.');
+        }
+    
+        return redirect()->route('social.index');
+    }
 }

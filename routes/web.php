@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', [GeneratorHTMLController::class, 'index']);
 Route::resource('social', GeneratorHTMLController::class);
+Route::post('/social/bulk-delete', [GeneratorHTMLController::class, 'bulkDelete'])->name('social.bulkDelete');
 
